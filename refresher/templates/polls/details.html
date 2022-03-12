@@ -1,0 +1,11 @@
+{% extends 'base.html' %} {% block content %}
+<div class="text-center mb-3">Details</div>
+<div class="card mb-3">
+  <div class="card-body">
+    <p class="lead">{{ question.text }}</p>
+    {%for choice in question.choice_set.all%}
+    <p>{{choice.text}}</p>
+    {%endfor%}
+  </div>
+</div>
+{% endblock %}
